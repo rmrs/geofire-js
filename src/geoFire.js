@@ -63,6 +63,9 @@ var GeoFire = function(firebaseRef) {
     return _firebaseRef.update(newData);
   };
 
+  this.encodeGeohash = encodeGeohash;
+  this.encodeGeoFireObject = encodeGeoFireObject;
+
   /**
    * Returns a promise fulfilled with the location corresponding to the provided key.
    *
