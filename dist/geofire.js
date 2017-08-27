@@ -109,9 +109,6 @@ var GeoFire = function(firebaseRef) {
     return _firebaseRef.update(newData);
   };
 
-  this.encodeGeohash = encodeGeohash;
-  this.encodeGeoFireObject = encodeGeoFireObject;
-
   /**
    * Returns a promise fulfilled with the location corresponding to the provided key.
    *
@@ -163,6 +160,15 @@ var GeoFire = function(firebaseRef) {
 
   var _firebaseRef = firebaseRef;
 };
+
+GeoFire.encodeGeohash = function(location, precision) {
+  return encodeGeohash(location, precision);
+};
+GeoFire.encodeGeoFireObject = function(location, geohash) {
+  return encodeGeoFireObject(location, geohash);
+};
+
+
 
 /**
  * Static method which calculates the distance, in kilometers, between two locations,
